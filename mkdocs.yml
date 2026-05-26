@@ -1,0 +1,35 @@
+pip install mkdocs mkdocs-materialsite_name: Документация Digital Library API
+site_description: Руководство по интеграции с ядром цифровой библиотеки
+
+theme:
+  name: material
+  language: ru                    # Локализация интерфейса и поискового движка
+  palette:
+    # Настройка светлой темы
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Перейти на темную тему
+    # Настройка темной темы
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: lime
+      toggle:
+        icon: material/brightness-4
+        name: Перейти на светлую тему
+  features:
+    - navigation.tabs             # Верхние вкладки навигации
+    - navigation.sections         # Группировка разделов в боковом меню
+    - search.suggest              # Умные подсказки при поиске
+    - search.highlight            # Подсветка найденного текста
+
+# Архитектура меню (Связываем структуру сайта с файлами в папке docs/)
+nav:
+  - Введение: index.md
+  - Руководство разработчика:
+    - Быстрый старт: dev/quickstart.md
+    - Описание эндпоинтов API: dev/api_endpoints.md
